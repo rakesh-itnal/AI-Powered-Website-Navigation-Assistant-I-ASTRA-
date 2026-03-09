@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Careers - TechNova</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">TechNova</div>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/jobs">Careers</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="careers-hero">
+    <h1>Build Your Career With Us</h1>
+    <p>Join a team of innovators shaping the future of technology.</p>
+</section>
+
+<!-- WHY JOIN US -->
+<section class="why-join">
+    <h2>Why Join TechNova?</h2>
+    <div class="why-container">
+        <div class="why-card">
+            <h3>Innovation Driven</h3>
+            <p>Work on cutting-edge AI & cloud technologies.</p>
+        </div>
+        <div class="why-card">
+            <h3>Global Exposure</h3>
+            <p>Collaborate with international clients & teams.</p>
+        </div>
+        <div class="why-card">
+            <h3>Growth & Learning</h3>
+            <p>Continuous training and career development programs.</p>
+        </div>
+    </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits">
+    <h2>Employee Benefits</h2>
+    <div class="benefits-list">
+        <span>✔ Competitive Salary</span>
+        <span>✔ Health Insurance</span>
+        <span>✔ Flexible Working Hours</span>
+        <span>✔ Remote Work Options</span>
+        <span>✔ Paid Leaves</span>
+        <span>✔ Performance Bonuses</span>
+    </div>
+</section>
+
+<!-- OPEN POSITIONS -->
+<section class="open-positions">
+    <h2>Open Positions</h2>
+    <div class="job-list">
+        {% for job in jobs %}
+        <div class="job-card">
+            <h3>{{ job.title }}</h3>
+            <p>{{ job.description }}</p>
+            <p><strong>Location:</strong> {{ job.location }}</p>
+            <a href="/contact" class="btn">Apply Now</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- HIRING PROCESS -->
+<section class="hiring-process">
+    <h2>Our Hiring Process</h2>
+    <div class="process-steps">
+        <div class="step">1. Online Application</div>
+        <div class="step">2. Technical Interview</div>
+        <div class="step">3. HR Discussion</div>
+        <div class="step">4. Offer Letter</div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 TechNova Solutions. All Rights Reserved.</p>
+</footer>
+
+<!-- I ASTRA TOGGLE BOT -->
+<div id="chatbot">
+    <img src="/static/astra.png" alt="I ASTRA" id="astra-icon">
+    <input type="text" id="chat-input" placeholder="Ask me to navigate...">
+</div>
+<script src="/static/script.js"></script>
+</body>
+</html>
